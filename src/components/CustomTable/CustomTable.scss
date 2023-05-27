@@ -1,0 +1,75 @@
+.nft-list{
+    
+    @media (max-width: 1279px) {
+        overflow: hidden;
+    }
+
+    .wrapper{
+        @include responsiveWidth(1800);
+        padding: 0 20px;
+        margin: 0 auto;
+
+        @media (max-width: 1279px) {
+            overflow-x: scroll;
+        }
+
+        .nft-box {
+            @media (max-width: 1279px) {
+                width: max-content;
+            }
+
+            .titles-table{
+                display: grid;
+                grid-template-columns: clampFluidResponsive(375, 140, 90) clampFluidResponsive(375, 90, 70) 1fr clampFluidResponsive(375, 80, 60) repeat(4, 1fr);
+                margin-bottom: 15px;
+                font-family: "Inter", sans-serif;
+                font-weight: 600;
+                line-height: 120%;
+                @include responsiveFontSize(375, 12, 12);
+                margin-bottom: 15px;
+                color: #838898;
+            }
+
+            .nft-table{
+                background: $white;
+                padding: 0 10px;
+                border-radius: 20px;
+                border: 1px solid #e7ecea;
+                font-family: "Inter", sans-serif;
+                font-weight: 600;
+                line-height: 120%;
+                @include responsiveFontSize(375, 14, 14);
+                margin-bottom: 15px;
+                color: #383F53;
+
+                .nft{
+                    display: grid;
+                    grid-template-columns: clampFluidResponsive(375, 130, 80) clampFluidResponsive(375, 90, 70) 1fr clampFluidResponsive(375, 80, 60) repeat(4, 1fr);
+                    align-items: center;
+                    padding: 10px 0;
+
+
+                    &:not(:last-child){
+                        border-bottom: 1px solid #e7ecea;
+                    }
+    
+                    .image-container{
+                        max-width: clampFluidResponsive(375, 60, 40);
+                        width: 100%;
+                        
+                        img{
+                            border-radius: 10px;
+                        }
+                    }
+
+                    .text-container{
+                        .sub{
+                            margin-top: 5px;
+                            color: rgb(187, 185, 185);
+                        }
+                    }
+                }   
+            }
+        }
+    }
+}

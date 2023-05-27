@@ -1,0 +1,38 @@
+.heading {
+  background: #222638;
+  margin-bottom: 25px;
+  
+  .wrapper {
+    display: grid;
+    .image-container {
+      grid-column: 1;
+      grid-row: 1;
+      justify-self: self-end;
+    }
+    .text-container {
+      grid-column: 1;
+      grid-row: 1;
+      justify-self: self-start;
+      align-self: center;
+      margin-left: clampFluidResponsive(375, 35, 1);
+      padding: 0 15px;
+
+      .title {
+        font-family: "Inter", sans-serif;
+        font-weight: 600;
+        line-height: 120%;
+        @include responsiveFontSize(375, 40, 30);
+        margin-bottom: 15px;
+        color: $white;
+      }
+
+      .text {
+        font-family: "Inter", sans-serif;
+        font-weight: 400;
+        line-height: 120%;
+        @include responsiveFontSize(375, 20, 16);
+        color: $extralightgrey;
+      }
+    }
+  }
+}
